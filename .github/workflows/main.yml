@@ -1,6 +1,8 @@
 name: dependent jobs
 on:
   push:
+    branches:
+      - main
 jobs:
   review:
     runs-on: ubuntu-latest
