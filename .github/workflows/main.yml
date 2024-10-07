@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: run multi-line script
-       run: |
+       run:|
          hostname -s
          echo "Compile code"
          echo "I don't care"
