@@ -2,7 +2,7 @@ name: dependent jobs
 on:
   push:
     branches:
-      - main
+      - dev
 jobs:
   review:
     runs-on: ubuntu-latest
