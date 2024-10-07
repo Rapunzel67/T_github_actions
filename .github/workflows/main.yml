@@ -1,24 +1,17 @@
-name: My first workflow with multi-line code
-on: workflow_dispatch     
+name: dependent jobs
+on: workflow_dispatch
 jobs:
- job1:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Print a Greeting
-     run: echo "Hello All"
-   - name: Print goodbyee
-     run : echo "Bye Bye"
- job2:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Run a one-line script 
-     run: echo "Hello World"
- buildJob:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Run a multi-line script 
-     run: |
-      hostname -s
-      echo "Compile code"
-      echo "maven test code"
-      echo "maven package code"
+  build:
+    runs-on:ubuntu-latest
+    steps:
+      - name: Checkout the Code
+        run: echo "checkout"
+      - name: Build the Code
+        run: echo "build"
+  deploy:
+    runs-on:ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy the Build
+        run: echo "deploy"
+    
