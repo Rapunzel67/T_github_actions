@@ -1,0 +1,15 @@
+name: My First Workflow
+on: workflow_dispatch      # this is the event which triggers manual invocation
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print welcome
+        run echo "Welcome!"
+      - name: Print goodbye
+        run echo "Bye..."
+  job2:
+    runs-on: ubuntu-latest
+  job3:
+    runs-on: ubuntu-latest
+    
