@@ -1,9 +1,11 @@
 name: dependent jobs
-on:
-  push:
-    branches:
-      - dev
-jobs:
+on: 
+ push: 
+  branches: [main]
+ pull_request:
+  branches:
+   - main
+ workflow_dispatch:jobs:
   review:
     runs-on: ubuntu-latest
     steps:
