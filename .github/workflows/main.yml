@@ -1,4 +1,5 @@
-name: My First Workflow
+# some coment…
+name: My First Workflow with multi-line code
 on: workflow_dispatch      # this is the event which triggers manual invocation
 jobs:
   job1:
@@ -11,6 +12,14 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     steps:
-      - name: Print abc
-        run: echo "something individual"
-        
+      - name: Print sth else
+        run: echo "some individual message"
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      -name: run multi-line script
+       run: |
+         hostname -s
+         echo "Compile code"
+         echo "I don't care"
+         
