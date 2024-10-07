@@ -5,11 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print welcome
-        run echo "Welcome!"
+        run: echo "Welcome!"
       - name: Print goodbye
-        run echo "Bye..."
+        run: echo "Bye..."
   job2:
     runs-on: ubuntu-latest
-  job3:
-    runs-on: ubuntu-latest
-    
+    steps:
+      - name: Print abc
+        run: echo "something individual"
+        
