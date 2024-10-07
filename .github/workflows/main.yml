@@ -1,5 +1,6 @@
 name: dependent jobs
-on: workflow_dispatch
+on:
+  push:
 jobs:
   review:
     runs-on: ubuntu-latest
