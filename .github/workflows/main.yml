@@ -1,25 +1,24 @@
-# some coment…
-name: My First Workflow with multi-line code
-on: workflow_dispatch      # this is the event which triggers manual invocation
+name: My first workflow with multi-line code
+on: workflow_dispatch     
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print welcome
-        run: echo "Welcome!"
-      - name: Print goodbye
-        run: echo "Bye..."
-  job2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print sth else
-        run: echo "some individual message"
-  job3:
-    runs-on: ubuntu-latest
-    steps:
-      -name: run multi-line script
-       run:|
-         hostname -s
-         echo "Compile code"
-         echo "I don't care"
-         
+ job1:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Print a Greeting
+     run: echo "Hello All"
+   - name: Print goodbyee
+     run : echo "Bye Bye"
+ job2:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Run a one-line script 
+     run: echo "Hello World"
+ buildJob:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Run a multi-line script 
+     run: |
+      hostname -s
+      echo "Compile code"
+      echo "maven test code"
+      echo "maven package code"
