@@ -7,7 +7,7 @@ jobs:
    - name: generate a random number 
      id: generator
      run: |
-       "num=$RANDOM % 2"
+       echo "num=$RANDOM % 2"
        echo "done"
    - name: conditions 1
      if: steps.generator.outputs.num == 0
