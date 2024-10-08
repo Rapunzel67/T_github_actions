@@ -8,7 +8,7 @@ jobs:
      id: generator
      run: |
        export RNDNUM=$RANDOM
-       echo "num=$RNDNUM % 2"
+       num=$RNDNUM % 2
    - name: conditions 1
      if: steps.generator.outputs.num == 0
      run: echo zero
